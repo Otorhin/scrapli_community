@@ -7,7 +7,7 @@ from scrapli_community.dlink.os.sync_driver import default_sync_on_close, defaul
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"[a-z0-9.\-_@()/:]{1,63}:(user|oper|puser|3|4|6)#\s*$",
+            pattern=r"[a-z0-9.\-_@()/:]{1,63}:(user|puser|3|6)#\s*$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -18,7 +18,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"[a-z0-9.\-_@/:]{1,63}:(admin|5)#\s*$",
+            pattern=r"[a-z0-9.\-_@/:]{1,63}:(oper|admin|4|5)#\s*$",
             name="privilege_exec",
             previous_priv="exec",
             deescalate="",
@@ -29,7 +29,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"[a-z0-9.\-_@/:]{1,63}:(admin|5)#\s*$",
+            pattern=r"[a-z0-9.\-_@/:]{1,63}:(oper|admin|4|5)#\s*$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="",
