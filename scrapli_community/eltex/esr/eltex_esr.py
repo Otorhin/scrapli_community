@@ -1,4 +1,4 @@
-"""scrapli_community.eltex.esr.exltex_esr"""
+"""scrapli_community.eltex.esr.eltex_esr"""
 
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.eltex.esr.async_driver import default_async_on_close, default_async_on_open
