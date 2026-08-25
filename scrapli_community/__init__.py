@@ -1,3 +1,3 @@
 """scrapli_community"""
 
-__version__ = "2025.01.30"
+__version__ = "2026.02.20"
