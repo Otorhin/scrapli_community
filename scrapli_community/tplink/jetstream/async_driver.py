@@ -19,6 +19,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     await conn.send_command(command="disable clipaging")
     await conn.send_command(command="disable cli prompting")
+    await conn.send_command(command="terminal length 0")
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
