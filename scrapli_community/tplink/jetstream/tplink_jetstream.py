@@ -18,7 +18,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^[\*\s]*(.*)\#\s*$",
+            pattern=r"^(?!\s*#)[\*\s]*(.*)\#\s*$",
             name="privilege_exec",
             previous_priv="exec",
             escalate="enable",
@@ -29,7 +29,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^[\*\s]*(.*)\#\s*$",
+            pattern=r"^(?!\s*#)[\*\s]*(.*)\#\s*$",
             name="configuration",
             previous_priv="privilege_exec",
             escalate="",
